@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Time tracking dashboard</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+      html {
+        height: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+      }
+
+      body {
+        font-family: 'Rubik', sans-serif;
+        background-color: hsl(226, 43%, 10%);
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        align-items: center;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: 300;
+      }
+
+      main {
+        flex-grow: 1;
+        padding-top: 40px;
+        color: white;
+        max-width: 800px;
+        width: 100%;
+      }
+
+      .box-bg {
+        background-color: hsl(235, 46%, 20%);
+      }
+
+      .box-p {
+        padding: 20px;
+      }
+
+      .box-round {
+        border-radius: 15px;
+        overflow: hidden;
+      }
+
+      .user-report {
+        padding: 25px;
+        background-color: hsl(246, 80%, 60%);
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+      }
+
+      .user-report img {
+        width: 60px;
+        height: 60px;
+        border: 2px solid white;
+        border-radius: 50%;
+      }
+
+      .report-text {
+        margin-left: 20px;
+      }
+
+      .report-text p {
+        margin-bottom: 3px;
+        margin-top: 3px;
+      }
+
+      .report-for {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .freq {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .freq div:not(.active) {
+        opacity: 0.6;
+      }
+
+      .dots {
+        position: relative;
+        width: 100%;
+        right: -5px;
+      }
+
+      .dot,
+      .dot:before,
+      .dot:after {
+        position: absolute;
+        width: 4px;
+        height: 4px;
+        border-radius: 3px;
+        background-color: white;
+        right: 15px;
+      }
+
+      .dot:before,
+      .dot:after {
+        content: '';
+      }
+
+      .dot:before {
+        right: 7px;
+      }
+
+      .dot:after {
+        left: 7px;
+      }
+
+      .activity-container {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        border-radius: 15px;
+        padding-top: 40px;
+        background-repeat: no-repeat;
+        background-position: top -10px right 20px;
+      }
+
+      .activity {
+        border-radius: 15px;
+      }
+
+      .activity-title {
+        font-weight: 500;
+      }
+
+      .activity-hours {
+        font-size: 2rem;
+        font-weight: 300;
+      }
+
+      .activity-row {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5px;
+      }
+
+      .activity-last-week {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+
+      .work {
+        background-image: url(images/icon-work.svg);
+        background-color: hsl(15, 100%, 70%);
+      }
+
+      .play {
+        background-image: url(images/icon-play.svg);
+        background-color: hsl(195, 74%, 62%);
+      }
+
+      .study {
+        background-image: url(images/icon-study.svg);
+        background-color: hsl(348, 100%, 68%);
+      }
+
+      .attribution {
+        padding: 30px;
+        font-size: 11px;
+        color: white;
+        text-align: center;
+      }
+
+      .attribution a {
+        color: hsl(195, 74%, 62%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="box-bg box-round">
+        <div class="user-report box-p">
+          <img src="images/image-jeremy.png" alt="Jeremy" />
+          <div class="report-text">
+            <p class="report-for">Report for</p>
+            <p class="user-name">Jeremy Robson</p>
+          </div>
+        </div>
+        <div class="freq box-p">
+          <div>Daily</div>
+          <div class="active">Weekly</div>
+          <div>Monthly</div>
+        </div>
+      </div>
+      <div class="activity-container work">
+        <div class="activity box-bg box-p">
+          <div class="activity-row">
+            <div class="activity-title">Work</div>
+
+            <a href="#" class="dots">
+              <div class="dot"></div>
+            </a>
+          </div>
+          <div class="activity-row">
+            <!-- daily -->
+            <div class="activity-hours">32hrs</div>
+            <div class="activity-last-week">Last week - 36hrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-container play">
+        <div class="activity box-bg box-p">
+          <div class="activity-row">
+            <div class="activity-title">Play</div>
+
+            <a href="#" class="dots">
+              <div class="dot"></div>
+            </a>
+          </div>
+          <div class="activity-row">
+            <!-- daily -->
+            <div class="activity-hours">10hr</div>
+            <div class="activity-last-week">Last week - 8hrs</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="activity-container study">
+        <div class="activity box-bg box-p">
+          <div class="activity-row">
+            <div class="activity-title">Study</div>
+
+            <a href="#" class="dots">
+              <div class="dot"></div>
+            </a>
+          </div>
+          <div class="activity-row">
+            <!-- daily -->
+            <div class="activity-hours">10hr</div>
+            <div class="activity-last-week">Last week - 8hrs</div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/ComicScrip">ComicScrip</a>.
+    </footer>
+  </body>
+</html>
