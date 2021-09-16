@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(47, 47, 47);
+}
+
+#app {
+  width: 100%;
+  font-family: 'Rubik', sans-serif;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  padding: 25px;
+  padding-top: 16px;
+  font-size: 24px;
+  font-weight: 300;
+}
+
+main {
+  flex-grow: 1;
+  padding-top: 65px;
+  color: white;
+  max-width: 800px;
+  width: 100%;
+}
+
+.box-bg {
+  background-color: hsl(235, 46%, 20%);
+}
+
+.box-p {
+  padding-top: 28px;
+  padding-bottom: 22px;
+  padding-left: 24px;
+  padding-right: 25px;
+}
+
+.box-round {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.user-report {
+  padding-top: 33px;
+  padding-right: 10px;
+  padding-left: 28px;
+  padding-bottom: 31px;
+  background-color: hsl(246, 80%, 60%);
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.user-report img {
+  width: 65px;
+  height: 65px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.report-text {
+  margin-left: 18px;
+  position: relative;
+  top: 1px;
+  opacity: 0.8;
+}
+
+.report-text p {
+  margin-bottom: 3px;
+  margin-top: 0px;
+}
+
+.report-text p.report-for {
+  margin-bottom: 4px;
+  font-size: 15px;
+  opacity: 0.6;
+  font-weight: 400;
+}
+
+.freq {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  padding: 24px;
+  position: relative;
+}
+
+.freq div:not(.active) {
+  opacity: 0.6;
+}
+
+.dots {
+  position: relative;
+  width: 100%;
+  right: -8px;
+  top: -2px;
+}
+
+.dot,
+.dot:before,
+.dot:after {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 3px;
+  background-color: white;
+  right: 15px;
+}
+
+.dot:before,
+.dot:after {
+  content: '';
+}
+
+.dot:before {
+  right: 7px;
+}
+
+.dot:after {
+  left: 7px;
+}
+
+.activity-container {
+  font-size: 18px;
+  margin-top: 24px;
+  margin-bottom: 20px;
+  border-radius: 15px;
+  padding-top: 38px;
+  background-repeat: no-repeat;
+}
+
+.activity {
+  border-radius: 15px;
+}
+
+.activity-title {
+  width: 100%;
+  font-weight: 500;
+  opacity: 0.9;
+}
+
+.activity-hours {
+  font-size: 2rem;
+  font-weight: 300;
+  opacity: 0.8;
+}
+
+.activity-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.activity-last-week {
+  font-size: 15px;
+  opacity: 0.6;
+}
+
+.work {
+  background-image: url(images/icon-work.svg);
+  background-color: hsl(15, 100%, 70%);
+  background-position: top -11px right 16px;
+}
+
+.play {
+  background-image: url(images/icon-play.svg);
+  background-color: hsl(195, 74%, 62%);
+  background-position: top -5px right 20px;
+}
+
+.study {
+  background-image: url(images/icon-study.svg);
+  background-color: hsl(348, 100%, 68%);
+  background-position: top -7px right 15px;
+}
+
+.exercise {
+  background-image: url(images/icon-exercise.svg);
+  background-color: hsl(145, 58%, 55%);
+  background-position: top -1px right 16px;
+}
+
+.social {
+  background-image: url(images/icon-social.svg);
+  background-color: hsl(264, 64%, 52%);
+  background-position: top -15px right 12px;
+}
+
+.self-care {
+  background-image: url(images/icon-self-care.svg);
+  background-color: hsl(43, 84%, 65%);
+  background-position: top -11px right 14px;
+}
+
+.attribution {
+  padding: 20px;
+  font-size: 11px;
+  color: white;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(195, 74%, 62%);
+}
