@@ -41,6 +41,7 @@ function initSlider({ img, rootSelector }) {
 
   sliderImage.onload = function () {
     app.style.width = `${this.naturalWidth}px`;
+    body.style.minWidth = `${this.naturalWidth}px`;
     app.style.boxSizing = 'border-box';
     slider.style.width = `${this.naturalWidth}px`;
     slider.style.height = `${this.naturalHeight}px`;
