@@ -1,3 +1,14 @@
+let fromX, fromY;
+function printDistances(e) {
+  if (fromX && fromY) {
+    console.log(`↔️ : ${Math.abs(fromX - e.pageX)}px`);
+    console.log(`↕️ : ${Math.abs(fromY - e.pageY)}px`);
+  }
+  fromX = e.pageX;
+  fromY = e.pageY;
+}
+document.body.addEventListener('mousedown', printDistances);
+
 function initSlider({ img, rootSelector = '#app' }) {
   if (!document.querySelector(rootSelector)) {
     console.error(
