@@ -1,10 +1,8 @@
-body {
-  min-height: 100vh;
-}
 #app {
   padding: 0;
   justify-content: center;
 }
+
 main {
   padding: 0;
   flex-grow: 0;
@@ -15,9 +13,11 @@ main {
   max-width: none;
   width: auto;
 }
+
 .attribution {
   display: none;
 }
+
 .user-report-container {
   grid-row-start: 1;
   grid-row-end: 3;
