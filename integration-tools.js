@@ -1,4 +1,11 @@
-function initSlider({ img, rootSelector }) {
+function initSlider({ img, rootSelector = '#app' }) {
+  if (!document.querySelector(rootSelector)) {
+    console.error(
+      `no element selectable with "${rootSelector}" exists on this page, aborting slider initialization.`
+    );
+    return;
+  }
+
   const slider = document.createElement('div');
   slider.innerHTML = `
   <div class="slider-container slider-container-left">
