@@ -11,19 +11,18 @@ body {
   display: flex;
   justify-content: center;
   background-color: rgb(47, 47, 47);
+  font-family: 'Rubik', sans-serif;
 }
 
 #app {
   width: 100%;
-  font-family: 'Rubik', sans-serif;
+  height: 100%;
   background-color: hsl(226, 43%, 10%);
   display: flex;
   flex-direction: column;
-  height: 100%;
   align-items: center;
   padding: 25px;
   padding-top: 16px;
-  font-size: 24px;
   font-weight: 300;
 }
 
@@ -70,6 +69,7 @@ main {
 }
 
 .report-text {
+  font-size: 24px;
   margin-left: 18px;
   position: relative;
   top: 1px;
